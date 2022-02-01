@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+   <children>
+      <GridPane hgap="8.0" layoutX="200.0" layoutY="110.0" prefHeight="400.0" prefWidth="600.0" vgap="8.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.4000244140625" minWidth="10.0" prefWidth="362.39996337890625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="382.3999969482421" minWidth="10.0" prefWidth="276.8000366210938" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="214.40001220703124" minHeight="10.0" prefHeight="45.40000686645507" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="322.79999313354494" minHeight="10.0" prefHeight="35.99999999999999" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="267.8000091552734" minHeight="10.0" prefHeight="125.6" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="287.00000305175774" minHeight="10.0" prefHeight="218.6000244140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="267.8000091552734" minHeight="10.0" prefHeight="35.39997558593751" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextArea fx:id="txaRecipes" editable="false" prefHeight="150.0" prefWidth="601.0" promptText="Recipes will be shown here." GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <Button fx:id="btnGenerate" mnemonicParsing="false" onAction="#btnGenerateOnAction" prefHeight="42.0" prefWidth="128.0" text="Generate recipes" GridPane.rowIndex="4" />
+            <Button fx:id="btnRemoveLast" mnemonicParsing="false" onAction="#btnRemoveLastOnAction" prefHeight="26.0" prefWidth="108.0" text="Remove" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtQuantity" prefHeight="26.0" prefWidth="282.0" promptText="Enter quantity in grams or for one piece (Ex. 1.50):" GridPane.columnIndex="1" />
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="108.0" text="Add" GridPane.rowIndex="1" />
+            <Button fx:id="btnQuit" mnemonicParsing="false" onAction="#btnQuitOnAction" prefHeight="44.0" prefWidth="123.0" text="Quit" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cboChooseProduct" prefHeight="26.0" prefWidth="338.0" promptText="Choose product" />
+            <TextArea fx:id="txaProducts" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Your products." GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
